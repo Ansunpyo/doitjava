@@ -21,7 +21,12 @@ public class IntegerEx {
 //		sNum = 40_000; //short자료형은 -32768~+32767까지 사용 가능
 //		iNum = 2_200_000_000 //int자료형은 -2,147,483,648~+2,147,483,647까지 사용 가능
 		System.out.println(1_000_000_000); //10억 출력
-		System.out.println(3_000_000_000l); //30억 출력
+		System.out.println(3_000_000_000L); //long형 자료는 영문자 L을 붙이는데 대문자를 사용해야 합니다.
+		int result;
+		result = sNum + bNum;
+		
+		long lNum = 3_000_000_000L;
+		System.out.println(lNum);
 	}
 
 }

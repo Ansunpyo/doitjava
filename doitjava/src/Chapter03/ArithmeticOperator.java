@@ -1,0 +1,26 @@
+package Chapter03;
+
+public class ArithmeticOperator {
+
+	public static void main(String[] args) {
+		int iRes;
+		double dRes;
+		
+		iRes = 3+2;
+		System.out.println(iRes);
+		iRes = 3-2;
+		System.out.println(iRes);
+		iRes = 3*2;
+		System.out.println(iRes);
+		iRes = 3/2;
+		System.out.println(iRes);
+		dRes = 3.0/2.0;
+		System.out.println(dRes);
+		iRes = 3%2;
+		System.out.println(iRes);
+
+		dRes = (double)3/2;
+		System.out.println(dRes);
+	}
+
+}
