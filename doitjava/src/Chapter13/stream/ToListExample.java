@@ -1,10 +1,26 @@
 package Chapter13.stream;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class ToListExample {
-
 	public static void main(String[] args) {
-		// TODO 자동 생성된 메소드 스텁
-
+		List<Student2> totalList = Arrays.asList(
+				new Student2("홍길동", 10, Student2.Sex.MALE),
+				new Student2("김수애", 6, Student2.Sex.FEMALE),
+				new Student2("신용권", 10, Student2.Sex.MALE),
+				new Student2("박수미", 6, Student2.Sex.FEMALE)
+		);
+		
+		List<Student2> maleList = totalList.stream().filter(s -> s.getScore() == Student2.Sex.MALE)
+				.collect(collectors.toList());
+		maleList.stream().forEach(s -> System.out.println(s.getName()));
+		
+		System.out.println();
+		Set<Student2> femaleSet = totalList.stream().filter(s -> s.getSex() == Student2.Sex.FEMALE)
+				.collect(Collectors.toCollection()) -> new HashSet<Student2>()));
+		femaleSet.Stream().forEach(s -> System.out.ptintln(s.getName()));
 	}
 
 }
